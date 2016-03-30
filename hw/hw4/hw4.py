@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 
-import hw4_solution
+from hw4_solution import (
+  is_odd,
+  is_even,
+  is_mult_of_four,
+  is_mult_of_divisor,
+  both ends,
 # --------------------------------------------------------------------
 # Problem 1
 # 
-# Create a function, is_odd, that takes a number and returns True if
-# that number is odd.
-# 
-# Function: is_odd
-# 
-# parameters:
-# - number
-#
-# returns: boolean
+# def is_odd(number):
+      return number% 2==1
+      
+      def test_is_odd():
+          assert is_odd(4) == False
+          assert is_odd(5) == True
+      
 
 
 
@@ -21,13 +24,10 @@ import hw4_solution
 # 
 # Create a function, is_even, that takes a number and returns True if
 # that number is even. 
-# 
-# Function: is_even
-# 
-# parameters:
-# - number
-#
-# returns: boolean
+# def is_even(number):
+      return not is_odd(number)
+# def test_is_even():
+       assert is
 
 
 
@@ -36,14 +36,11 @@ import hw4_solution
 # 
 # Create a function, is_mult_of_four, that takes a number and returns
 # True if that number is a multiple of four. 
-# 
-# Function: is_mult_of_four
-# 
-# parameters:
-# - number
-#
-# returns: boolean
-
+# def is_multi_of_four(number):
+    return number%4
+def test_is_mult_of_four():
+    assert is_mult_of_four(20) == True
+    assert is_mult_of_four(21) == False 
 
 
 # --------------------------------------------------------------------
@@ -59,7 +56,9 @@ import hw4_solution
 # - divisor
 #
 # returns: boolean
-
+def test_is_mult_of_divisor():
+    assert is_mult_of_divisor(20, 4) == True
+    assert is_mult_of_divisor(21, 4) == False
 
 
 # --------------------------------------------------------------------
@@ -75,3 +74,14 @@ import hw4_solution
 # - s
 #
 # returns: string
+def  test_both_ends():
+    inputs = [
+        ('spring', 'spng'),
+        ('a', ''),
+        ('', ''),
+        ('ab', 'abab'),
+        ('abc', abbc'),
+        ('abcd', 'abcd')
+      ]
+      for arg, output in inputs:
+          assert both_ends(arg) == output
