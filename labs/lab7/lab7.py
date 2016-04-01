@@ -13,13 +13,13 @@
 
 # --------------------------------------------------------------------
 # Problem 1
-# 
+#
 # Fix ducklings' names
-# 
+#
 # In Robert McCloskey’s book Make Way for Ducklings, the names of the
 # ducklings are Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and
 # Quack. This loop tries to output these names in order.
-# 
+#
 # Of course, that’s not quite right because Ouack and Quack are
 # misspelled. Can you fix it?
 #
@@ -28,7 +28,7 @@
 
 # --------------------------------------------------------------------
 # Problem 2
-# 
+#
 # Letter count
 #
 # Modify the count_letters function below so that:
@@ -39,24 +39,44 @@
 # Essentially, the function is returning the number of occurances of the
 # parameter char in the parameter string.
 
+from lab7_solution import(
+    count_letters,
+    reverse_string,
+    is_palindrome,
+)
 
+def test_count_letters():
+    inputs =[
+        ('apple','p', 2),
+        ('ate', 't', 1),
+        ('bite', 'x', 0),
+        '', 'a', 0),
+        ('string', '', 0),
+    ]
+    for string, char, correct in inputs:
+        assert count_letters(string, char) == correct
 
 # --------------------------------------------------------------------
 # Problem 3
 #
 # Reversing a string
-# 
+#
 # Complete the following function such that it reverses the parameter
 # string.
 
+def test_reverse_string():
+    inputs = [
+        ('hello', 'olleh'),
+        ('bob', 'bob'),
+        ('', ''),
 
 
 # --------------------------------------------------------------------
 # Problem 4
-# 
+#
 # Checking for palindromes
-# 
+#
 # Complete the following such that it correctly determines whether the
 # given parameter, string, is a palindrome
-# 
+#
 
