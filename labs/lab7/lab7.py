@@ -50,7 +50,7 @@ def test_count_letters():
         ('apple','p', 2),
         ('ate', 't', 1),
         ('bite', 'x', 0),
-        '', 'a', 0),
+        ('', 'a', 0),
         ('string', '', 0),
     ]
     for string, char, correct in inputs:
@@ -69,8 +69,10 @@ def test_reverse_string():
         ('hello', 'olleh'),
         ('bob', 'bob'),
         ('', ''),
-
-
+        ('a', 'a'),
+    ]
+    for string, correct in inputs:
+        assert reverse_string(string) == correct
 # --------------------------------------------------------------------
 # Problem 4
 #
@@ -80,3 +82,10 @@ def test_reverse_string():
 # given parameter, string, is a palindrome
 #
 
+def test_is_palindrome():
+    inputs = [
+        ('hello', False),
+        ('bob', True),
+    ]
+    for string, correct in inputs:
+        assert is_palidrome(palindrome) == correct
