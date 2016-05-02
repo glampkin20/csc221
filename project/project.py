@@ -21,3 +21,13 @@ def is_leap_year(year):
         return False
     else:
         return True
+        
+def ','.join(complement[nucleotide] for nucleotide in dna)
+    to_rna('G')
+    'C' 
+    to_rna('g')
+    'c'
+ def rna_count(dna):
+     d={}
+     for w in dna:
+         d[W] = dna.count(w)
